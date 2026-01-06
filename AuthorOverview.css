@@ -1,0 +1,211 @@
+/* Container */
+.author-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: sans-serif;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  background: linear-gradient(to right, #0066ff, #00ccff);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.banner-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .banner-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.banner-text {
+  color: white;
+  padding: 2rem;
+}
+.banner-text h2 {
+  margin-bottom: 0.75rem;
+}
+.banner-text p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+.banner-buttons button {
+  margin-right: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background-color: white;
+  color: #0066ff;
+}
+.btn-primary:hover {
+  background-color: #e6f0ff;
+}
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.banner-image {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .banner-image {
+    display: block;
+  }
+}
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border: 1px solid #f3f3f3;
+}
+.stat-icon {
+  margin-bottom: 1rem;
+}
+.icon-bg {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.blue-bg { background-color: #ebf5ff; }
+.green-bg { background-color: #e6ffed; }
+.orange-bg { background-color: #fff4e6; }
+.purple-bg { background-color: #f3e8ff; }
+
+.blue-text { color: #1d4ed8; }
+.green-text { color: #16a34a; }
+.orange-text { color: #ea580c; }
+.purple-text { color: #7c3aed; }
+
+.stat-value {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.stat-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Recent Submissions */
+.recent-submissions {
+  background: white;
+  border-radius: 0.5rem;
+  border: 1px solid #f3f3f3;
+  overflow: hidden;
+}
+.submissions-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.submissions-list {
+  display: flex;
+  flex-direction: column;
+}
+.submission-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  transition: background 0.2s;
+}
+.submission-item:hover {
+  background: #f9fafb;
+}
+.submission-info h4 {
+  margin-bottom: 0.25rem;
+}
+.submission-meta {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+.status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+.green-status { background-color: #16a34a; }
+.orange-status { background-color: #f97316; }
+.status-text { font-size: 0.875rem; color: #374151; margin-left: 0.25rem; }
+
+/* Important Dates */
+.important-dates {
+  background: linear-gradient(to bottom right, #fff7ed, #fffaf0);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #fed7aa;
+}
+.dates-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #ea580c;
+}
+.dates-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .dates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.date-item {
+  display: flex;
+  gap: 0.75rem;
+}
+.date-icon {
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #ea580c;
+}
+.date-info p:first-child {
+  color: #111827;
+  font-weight: 500;
+}
+.date-info p:last-child {
+  color: #6b7280;
+  font-size: 0.875rem;
+}

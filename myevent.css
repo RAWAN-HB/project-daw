@@ -1,0 +1,120 @@
+.myevent-page {
+  padding-top: 80px; /* below navbar */
+  font-family: "Poppins", sans-serif;
+  color: #1b1b1b;
+}
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  width: 100%;
+  min-height: 350px;
+  margin-bottom: 40px;
+}
+
+/* LEFT SIDE */
+.hero-section .left {
+  flex: 1;
+  background: linear-gradient(135deg, #0057b8, #0099ff);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  gap: 12px;
+}
+
+.hero-section .left h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-section .left h3 {
+  font-size: 1.8rem;
+  opacity: 0.9;
+}
+
+.hero-section .left p {
+  font-size: 1.1rem;
+  max-width: 350px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.hero-btn {
+  margin-top: 15px;
+  padding: 12px 28px;
+  background-color: white;
+  color: #0057b8;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e9f2ff;
+  transform: translateY(-2px);
+}
+/* RIGHT SIDE IMAGE */ .hero-section .right { flex: 0.9; background-image: url("../images/logo.jpg"); background-size: cover; /* cover the area */ background-position: center; /* center the image */ filter: brightness(0.85); /* elegant touch */ }
+/* DESCRIPTION CARD */
+.event-card {
+  width: 90%;
+  background: #ffffff;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #0057b8;
+}
+
+/* IMAGE GALLERY */
+.event-gallery {
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.event-gallery img {
+  width: 30%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: 0.3s ease;
+}
+
+.event-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* INFO BOXES */
+.event-info {
+  width: 90%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.info-box {
+  background: #f4f9ff;
+  padding: 18px;
+  text-align: center;
+  border-radius: 14px;
+  border-left: 5px solid #0057b8;
+}
+
+.info-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+

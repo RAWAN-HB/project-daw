@@ -1,0 +1,92 @@
+.events-list-page {
+  padding: 40px 20px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.events-list-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.events-list-page h1 {
+  text-align: center;
+  color: #1e293b;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.events-list-page > .container > p {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 28px;
+}
+
+.event-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.event-card h3 {
+  margin: 0 0 16px 0;
+  color: #1e293b;
+  font-size: 1.4rem;
+}
+
+.event-card p {
+  margin: 10px 0;
+  color: #475569;
+}
+
+.card-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-workshops {
+  padding: 12px 24px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-workshops:hover {
+  background: #2563eb;
+}
+
+.no-events {
+  text-align: center;
+  padding: 80px 20px;
+  color: #64748b;
+  font-size: 1.3rem;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 100px;
+  font-size: 1.5rem;
+  color: #64748b;
+}
+
+.error {
+  color: #ef4444;
+}

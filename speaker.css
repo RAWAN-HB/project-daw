@@ -1,0 +1,57 @@
+
+
+.container{
+    padding: 5% 10%;
+    height: 500px;
+    width: 100%;
+    
+    
+    display: flex;
+    background-color: rgb(40, 100, 230);
+    color: white;
+    
+}
+
+.profile-card{
+        height: fit-content;
+        width: 290px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: gray;
+        margin-right: auto;
+}
+
+img{
+    height: 200px;
+}
+
+.speaker-def-pr{
+    text-align: center;
+}
+
+.innovation{
+    background-color: rgb(128, 0, 255);
+    border: solid black;
+    padding: 20px 50px;
+}
+
+
+.innovations-section{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.innovations-cards{
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+button{
+    background-color: rgb(255, 122, 255);
+    font-size: medium;
+    padding: 20px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}

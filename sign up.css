@@ -1,0 +1,142 @@
+/* ===== BACKGROUND ===== */
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+/* Optional background lights */
+.signup-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+ background-image: url("../images/bb.jpg");
+  background-size: cover;
+  opacity: 0.25;
+  filter: brightness(1.2);
+}
+
+.signup-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: linear-gradient(to top, rgba(0,255,255,0.3), transparent);
+  filter: blur(40px);
+}
+
+/* ===== SIGNUP BOX ===== */
+.signup-card {
+  position: relative;
+  z-index: 5;
+  width: 400px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(0, 255, 255, 0.35);
+  border-radius: 18px;
+  padding: 35px;
+  color: white;
+  box-shadow: 0 0 25px rgba(0,255,255,0.25);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.8s ease;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* Title */
+.signup-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* ===== FORM ===== */
+.signup-form .form-group {
+  width: 100%;
+  margin-bottom: 1.3rem;
+  display: block;
+}
+
+
+.signup-form label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Inputs */
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.signup-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  border-bottom-color: cyan;
+}
+
+.signup-form select {
+  color: white;
+}
+
+/* ===== BUTTON ===== */
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background: cyan;
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px cyan;
+}
+
+.signup-btn:hover {
+  background: #7ff;
+  box-shadow: 0 0 18px #7ff;
+}
+
+/* ===== LINK TO LOGIN ===== */
+.signup-login {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.signup-login a {
+  color: cyan;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.signup-login a:hover {
+  text-decoration: underline;
+}

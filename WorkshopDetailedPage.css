@@ -1,0 +1,202 @@
+/* WorkshopsPage.css - Complete CSS with full RTL support for Arabic */
+
+.workshops-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* RTL overrides */
+.workshops-page[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+.workshops-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  position: relative;
+}
+
+.workshops-page h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #3498db;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.workshops-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.workshop-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.workshop-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.workshop-card h2 {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 24px 24px 12px;
+  color: #2c3e50;
+}
+
+.workshop-card .description p {
+  margin: 8px 0;
+  color: #555;
+  line-height: 1.6;
+  padding: 0 24px;
+}
+
+.workshop-card .meta p {
+  padding: 0 24px;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #7f8c8d;
+}
+
+.workshop-card .seats {
+  padding: 0 24px;
+  margin: 16px 0;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.workshop-card .seats.full {
+  color: #e74c3c;
+}
+
+.workshop-card .action {
+  padding: 20px 24px;
+  margin-top: auto;
+  border-top: 1px solid #ecf0f1;
+}
+
+.workshop-card button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.workshop-card button.register {
+  background-color: #3498db;
+  color: white;
+}
+
+.workshop-card button.register:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.workshop-card button.unregister {
+  background-color: #e67e22;
+  color: white;
+}
+
+.workshop-card button.unregister:hover:not(:disabled) {
+  background-color: #d35400;
+}
+
+.workshop-card button.full,
+.workshop-card button:disabled {
+  background-color: #95a5a6;
+  color: white;
+  cursor: not-allowed;
+}
+
+.workshop-card button.processing {
+  background-color: #7f8c8d;
+  cursor: wait;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  text-align: center;
+  padding: 80px 20px;
+  color: #7f8c8d;
+}
+
+.loading-spinner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error message */
+.error-message {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.2rem;
+  color: #e74c3c;
+}
+
+/* Empty state */
+.workshops-page p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .workshops-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .workshops-page h1 {
+    font-size: 2rem;
+  }
+  
+  .workshop-card h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Additional RTL fine-tuning */
+.workshops-page[dir="rtl"] .workshop-card p,
+.workshops-page[dir="rtl"] .workshop-card strong {
+  text-align: right;
+}
+
+.workshops-page[dir="rtl"] .workshop-card .action {
+  text-align: center;
+}
